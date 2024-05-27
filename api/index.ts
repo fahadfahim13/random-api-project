@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mjml2html = require('mjml');
 const axios = require('axios');
@@ -6,9 +7,9 @@ const bodyParser = require('body-parser');
 const app = express();
 
 const jsonParser = bodyParser.json()
-const APIKEY = 'a16b0233-8453-4bd6-8154-9bef08e1e25f';
-const SECRETKEY = '872e7b7c-5980-4664-9816-39dc97186470';
-const APIURL = 'https://api.mjml.io/v1/render';
+const APIKEY = process.env.APIKEY;
+const SECRETKEY = process.env.SECRETKEY;
+const APIURL = process.env.APIURL;
 
 // app.get("/", (req: Request, res: Response) => res.json({resp: "Express on Vercel"}));
 // app.get("/mjml-to-html", async (req: Request, res: Response) => {
