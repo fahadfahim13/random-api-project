@@ -11,7 +11,7 @@ const APIKEY = process.env.APIKEY;
 const SECRETKEY = process.env.SECRETKEY;
 const APIURL = process.env.APIURL;
 
-// app.get("/", (req: Request, res: Response) => res.json({resp: "Express on Vercel"}));
+app.get("/", (req: any, res: any) => res.send("Express on Vercel"));
 // app.get("/mjml-to-html", async (req: Request, res: Response) => {
 //     try {
 //         const resp = await axios.post(APIURL, {
